@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(39, 39, 39);
+  padding: 0px;
+  margin: 0px;
+}
+#title {
+  /* color: cornsilk; */
+}
+body {
+  background-color: cornsilk;
+  width: 100%;
+  /* margin: auto; */
+}
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(39, 39, 39);
+  color: cornsilk;
+}
+h1 {
+  font-size: 50px;
+}
+header nav,
+a,
+h1 {
+  margin-top: 10px;
+  color: cornsilk;
+}
+a:hover {
+  color: rgb(207, 55, 55);
+}
+.flex {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 10px 20px;
+  /* border: 2px solid red; */
+}
+article {
+  width: 400px;
+  padding: 16px 0;
+}
+section {
+  padding-top: 20px;
+  /* border: 2px solid blue; */
+}
+hr {
+  /* margin: 0 25px; */
+  display: none;
+}
+.portrait {
+  width: 400px;
+  padding: 0 0 4px 0;
+}
+footer {
+  background-color: rgb(39, 39, 39);
+  color: black;
+  padding: 20px;
+}
+footer a,
+label,
+h3 {
+  color: cornsilk;
+}
