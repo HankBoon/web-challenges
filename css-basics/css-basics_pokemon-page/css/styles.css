@@ -21,7 +21,7 @@
 /* ------- Headings Part 1 ------- */
 
 /* Task 3: Setting the line height to 1.5 is good for texts, for accessibility reasons, but it seems too much for headings. Let's change this by giving our headings a line height of 1.2. */
-h1 {
+.title {
   line-height: 1.2px;
 }
 /* Your solution */
