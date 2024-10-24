@@ -64,3 +64,13 @@ label,
 h3 {
   color: cornsilk;
 }
+footer ul {
+  margin-bottom: 20px;
+}
+label {
+  padding-bottom: 40px;
+}
+footer .flex {
+  justify-content: space-between;
+  padding: 0px;
+}
