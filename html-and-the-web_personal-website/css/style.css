@@ -79,9 +79,18 @@ footer ul {
   margin-bottom: 20px;
 }
 label {
-  padding-bottom: 40px;
+  /* margin-right: 40px; */
 }
 footer .flex {
   justify-content: space-between;
   padding: 0px;
+  margin-top: 50px;
+}
+
+#newsletter input {
+  margin-top: 10px;
+}
+#newsletter {
+  /* display: block; */
+  /* flex-direction: column; */
 }
