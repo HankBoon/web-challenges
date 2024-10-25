@@ -5,51 +5,64 @@
   padding: 0px;
   margin: 0px;
 }
+
 #title {
   /* color: cornsilk; */
 }
+
 body {
   background-color: cornsilk;
   width: 100%;
   /* margin: auto; */
 }
+
 header {
   padding: 20px;
   text-align: center;
   background-color: rgb(39, 39, 39);
   color: cornsilk;
 }
+
 h1 {
   font-size: 50px;
 }
+
 header nav,
 a,
 h1 {
   margin-top: 10px;
   color: cornsilk;
 }
+
 a:hover {
   color: rgb(207, 55, 55);
 }
+
 .flex {
   display: flex;
   gap: 40px;
   justify-content: center;
   padding: 10px 20px;
+  flex-wrap: wrap;
+
   /* border: 2px solid red; */
 }
+
 article {
   width: 400px;
   padding: 16px 0;
 }
+
 section {
   padding-top: 20px;
   /* border: 2px solid blue; */
 }
+
 hr {
   /* margin: 0 25px; */
   display: none;
 }
+
 .portrait {
   width: 400px;
   height: 400px;
@@ -57,30 +70,37 @@ hr {
   object-fit: cover;
   border-radius: 50%;
 }
+
 figure {
   margin: 20px 0;
   display: flex;
   justify-content: space-around;
 }
+
 footer {
   background-color: rgb(39, 39, 39);
   color: black;
   width: 100%;
   padding: 20px;
-  position: fixed;
+  position: sticky;
   bottom: 0;
 }
+
 footer a,
 label,
 h3 {
   color: cornsilk;
 }
+
 footer ul {
   margin-bottom: 20px;
+  list-style-type: none;
 }
+
 label {
   /* margin-right: 40px; */
 }
+
 footer .flex {
   justify-content: space-between;
   padding: 0px;
@@ -90,6 +110,7 @@ footer .flex {
 #newsletter input {
   margin-top: 10px;
 }
+
 #newsletter {
   /* display: block; */
   /* flex-direction: column; */
