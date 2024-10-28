@@ -286,11 +286,34 @@ width, etc. */
     gap: var(--gap);
     padding: 0 var(--gap);
     align-items: start;
+    grid-template-areas:
+      "forest forest forest forest"
+      "text text mountain mountain"
+      "river river ocean ocean"
+      ". desert desert .";
   }
   .product-card {
     width: 100%;
   }
   .--forest {
+    grid-area: forest;
+  }
+  .intro-text {
+    grid-area: text;
+  }
+  .--mountain {
+    grid-area: mountain;
+  }
+  .--river {
+    grid-area: river;
+  }
+  .--ocean {
+    grid-area: ocean;
+  }
+  .--desert {
+    grid-area: desert;
+  }
+  /* .--forest {
     grid-row: 1;
     grid-column: 1 / 5;
   }
@@ -310,5 +333,5 @@ width, etc. */
   }
   .--desert {
     grid-column: 2/4;
-  }
+  } */
 }
