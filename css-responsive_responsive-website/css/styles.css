@@ -255,12 +255,32 @@ width, etc. */
     padding: 0 var(--gap);
   }
   .product-card {
-    max-width: 49%;
+    flex: 49%;
   }
   .intro-text {
-    max-width: 49%;
+    flex: 49%;
   }
 }
+
+@media (min-width: 1200px) {
+  .card-section {
+    flex-direction: col;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    padding: 0 var(--gap);
+  }
+  .product-card,
+  .intro-text {
+    flex: 49%;
+    max-width: 50%;
+  }
+  .--forest {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 /* Media Query Tablet with grid*/
 /* @media (min-width: 900px) {
   .card-section {
