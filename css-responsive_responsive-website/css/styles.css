@@ -252,6 +252,7 @@ width, etc. */
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
+    padding: 0 var(--gap);
   }
   .product-card {
     max-width: 49%;
