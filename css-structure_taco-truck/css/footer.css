@@ -1,0 +1,17 @@
+.footer {
+  /* position: sticky; */
+  /* bottom: 0; */
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__list__item {
+  margin: 5px 0;
+  padding-left: 0;
+}

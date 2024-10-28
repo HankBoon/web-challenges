@@ -1,0 +1,9 @@
+.card__button {
+  border-radius: 10px;
+  max-width: 100px;
+  height: 30px;
+}
+.card__button:hover {
+  background-color: var(--header-text);
+  transition: 1s;
+}
