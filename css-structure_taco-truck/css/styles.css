@@ -21,18 +21,6 @@ body {
   background: var(--body-bg);
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  background: var(--header-bg);
-  color: var(--header-text);
-  padding: 20px;
-}
-
-.header__title {
-  margin: 0;
-}
-
 .main-content {
   background: var(--main-bg);
   padding: 20px;
