@@ -246,25 +246,26 @@ width, etc. */
 
 /*Media Query
  Tablet */
-/* @media (min-width: 600px) {
+@media (min-width: 900px) {
   .card-section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .product-card {
-    max-width: 40%;
     align-items: start;
   }
+  .product-card {
+    max-width: 49%;
+    /* align-items: start; */
+  }
   .intro-text {
-    max-width: 40%;
+    max-width: 49%;
     display: flex;
     align-items: start;
     text-align: start;
   }
-} */
-
-@media (min-width: 600px) {
+}
+/* Media Query Tablet with grid*/
+/* @media (min-width: 900px) {
   .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -275,17 +276,19 @@ width, etc. */
   .product-card {
     width: 100%;
   }
-}
+} */
 
-/* Media Query Desktop */
+/* Media Query Desktop with grid*/
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: var(--gap);
     padding: 0 var(--gap);
     align-items: start;
+
+    
     grid-template-areas:
       "forest forest forest forest"
       "text text mountain mountain"
@@ -312,8 +315,9 @@ width, etc. */
   }
   .--desert {
     grid-area: desert;
-  }
-  /* .--forest {
+  } */
+
+/* .--forest {
     grid-row: 1;
     grid-column: 1 / 5;
   }
@@ -334,4 +338,4 @@ width, etc. */
   .--desert {
     grid-column: 2/4;
   } */
-}
+/* } */
