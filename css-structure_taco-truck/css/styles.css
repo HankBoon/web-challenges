@@ -1,7 +1,7 @@
 @import "./theme.css";
-@import "./css/main.css";
-@import "./css/header.css";
-@import "./css/card.css";
+@import "./main.css";
+@import "./header.css";
+@import "./card.css";
 
 /* -------------------------------------------------------- */
 /* Global Styles */
