@@ -255,13 +255,9 @@ width, etc. */
   }
   .product-card {
     max-width: 49%;
-    /* align-items: start; */
   }
   .intro-text {
     max-width: 49%;
-    display: flex;
-    align-items: start;
-    text-align: start;
   }
 }
 /* Media Query Tablet with grid*/
