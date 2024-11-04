@@ -1,4 +1,4 @@
-let data = [];
+let data = {};
 switch (typeof data) {
   case "undefined":
     console.log("undefined!");

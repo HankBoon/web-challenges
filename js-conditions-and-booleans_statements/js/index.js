@@ -22,26 +22,7 @@ if (number % 2) {
 }
 // Part 3: Hotdogs
 const numberOfHotdogs = 549943;
-// const price1 = numberOfHotdogs < 5;
-// const price2 = 5 <= numberOfHotdogs && numberOfHotdogs < 100;
-// const price3 = 100 <= numberOfHotdogs && numberOfHotdogs < 1000000;
-// const price4 = 1000000 <= numberOfHotdogs;
-// switch (numberOfHotdogs) {
-//   case price1:
-//     console.log("The price is: 2 euro");
-//     break;
-//   case price2:
-//     console.log("The price is: 1.50euro");
-//     break;
-//   case price3:
-//     console.log("The price is: 1 euro");
-//     break;
-//   case price3:
-//     console.log("The price is: 0.10 euro");
-//     break;
-//   default:
-//     console.log("You have to buy at least one Hot Dog!");
-// }
+
 if (numberOfHotdogs < 5) {
   console.log(
     "When you buy " + numberOfHotdogs + " Hotdogs, one Hotdog costs 2 euro"
@@ -71,7 +52,7 @@ console.log(statement);
 
 // Part 5: Greeting
 const userName = "Archibald";
-const coachName = "Esra";
+const coachName = "Esraa";
 const greeting = "Hello " + (userName === coachName ? "coach" : userName) + "!";
 
 console.log(greeting);
