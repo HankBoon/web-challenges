@@ -1,6 +1,4 @@
-import { getRandomColor } from "../../utils/randomColor.js";
-
-export default function CreateCircle() {
+export default function CreateCircle(getRandomColor) {
   const circle = document.createElement("div");
   circle.classList.add("circle");
   circle.addEventListener("click", () => {

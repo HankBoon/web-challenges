@@ -1,5 +1,4 @@
-import { getRandomColor } from "../../utils/randomColor.js";
-export default function CreatePentagon() {
+export default function CreatePentagon(getRandomColor) {
   const pentagon = document.createElement("div");
   pentagon.classList.add("pentagon");
   pentagon.addEventListener("click", () => {

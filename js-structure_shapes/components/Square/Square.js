@@ -1,5 +1,4 @@
-import { getRandomColor } from "../../utils/randomColor.js";
-export default function CreateSquare() {
+export default function CreateSquare(getRandomColor) {
   const square = document.createElement("div");
   square.classList.add("square");
   square.addEventListener("click", () => {

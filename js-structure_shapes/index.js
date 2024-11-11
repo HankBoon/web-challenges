@@ -1,7 +1,7 @@
 console.clear();
-// import CreateCircle from "./components/Circle/Circle.js";
-// import CreateSquare from "./components/Square/Square.js";
-// import CreatePentagon from "./components/Pentagon/Pentagon.js";
+import CreateCircle from "./components/Circle/Circle.js";
+import CreateSquare from "./components/Square/Square.js";
+import CreatePentagon from "./components/Pentagon/Pentagon.js";
 
 import { getRandomColor } from "./utils/randomColor.js";
 
@@ -34,20 +34,20 @@ const root = document.getElementById("root");
 //   return pentagon;
 // }
 
-function CreateShape(shape) {
-  const createShape = document.createElement("div");
-  createShape.classList.add(shape);
-  createShape.addEventListener("click", () => {
-    createShape.style.backgroundColor = getRandomColor();
-  });
-  return createShape;
-}
+// function CreateShape(shape) {
+//   const createShape = document.createElement("div");
+//   createShape.classList.add(shape);
+//   createShape.addEventListener("click", () => {
+//     createShape.style.backgroundColor = getRandomColor();
+//   });
+//   return createShape;
+// }
 
-const circleElement = CreateShape("circle");
-const squareElement = CreateShape("square");
-const pentagonElement = CreateShape("pentagon");
+// const circleElement = CreateShape("circle");
+// const squareElement = CreateShape("square")";
+// const pentagonElement = CreateShape("pentagon");
 
-// const circleElement = CreateCircle();
-// const pentagonElement = CreatePentagon();
-// const squareElement = CreateSquare();
+const circleElement = CreateCircle(getRandomColor);
+const pentagonElement = CreatePentagon(getRandomColor);
+const squareElement = CreateSquare(getRandomColor);
 root.append(circleElement, pentagonElement, squareElement);
