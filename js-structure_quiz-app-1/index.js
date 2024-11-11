@@ -2,29 +2,9 @@ import cards from "./components/utils/cards.js";
 import Header from "./components/Header/Header.js";
 import Form from "./components/Form/Form.js";
 import Card from "./components/Card/Card.js";
-// const cards = [
-//   {
-//     question:
-//       "In the Kingdom Hearts series who provides the english voice for Master Eraqus?",
-//     answer: "Mark Hamill",
-//     tags: ["kingdomheart", "mastereraqus", "english voices"],
-//     isBookmarked: false,
-//   },
-//   {
-//     question:
-//       "Daniel Radcliffe became a global star in the film industry due to his performance in which film franchise?",
-//     answer: "Harry Potter",
-//     tags: ["hewhomustnotbenamed", "danielradcliffe", "abracadabra"],
-//     isBookmarked: false,
-//   },
-//   {
-//     question:
-//       'In the game series "The Legend of Zelda" what is the name of the main character?',
-//     answer: "Link",
-//     tags: ["linktothepast", "linkbetweenworlds", "linkbetweenages"],
-//     isBookmarked: false,
-//   },
-// ];
+import App from "./components/App/App.js";
+import CardList from "./components/CardList/CardList.js";
+import Bookmark from "./components/Bookmark/Bookmark.js";
 
 // function Header() {
 //   const header = document.createElement("header");
@@ -109,32 +89,32 @@ import Card from "./components/Card/Card.js";
 //   return form;
 // }
 
-function Bookmark(props) {
-  const bookmark = document.createElement("button");
-  bookmark.classList.add("bookmark");
+// function Bookmark(props) {
+//   const bookmark = document.createElement("button");
+//   bookmark.classList.add("bookmark");
 
-  if (props.active) {
-    bookmark.classList.add("bookmark--active");
-  }
+//   if (props.active) {
+//     bookmark.classList.add("bookmark--active");
+//   }
 
-  bookmark.type = "button";
-  bookmark.setAttribute("aria-label", "bookmark");
-  bookmark.innerHTML = /* html */ `
-		<svg
-			class="bookmark__icon"
-			xmlns="http://www.w3.org/2000/svg"
-			viewbox="0 0 24 24"
-		>
-			<path
-				d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-			/>
-		</svg>
-	`;
+//   bookmark.type = "button";
+//   bookmark.setAttribute("aria-label", "bookmark");
+//   bookmark.innerHTML = /* html */ `
+// 		<svg
+// 			class="bookmark__icon"
+// 			xmlns="http://www.w3.org/2000/svg"
+// 			viewbox="0 0 24 24"
+// 		>
+// 			<path
+// 				d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+// 			/>
+// 		</svg>
+// 	`;
 
-  bookmark.addEventListener("click", props.onClick);
+//   bookmark.addEventListener("click", props.onClick);
 
-  return bookmark;
-}
+//   return bookmark;
+// }
 
 // function Card(props) {
 //   const card = document.createElement("article");
@@ -189,25 +169,32 @@ function Bookmark(props) {
 //   return card;
 // }
 
-function CardList() {
-  const cardList = document.createElement("section");
-  cardList.classList.add("card-list");
+// function CardList() {
+//   const cardList = document.createElement("section");
+//   cardList.classList.add("card-list");
 
-  cards.forEach((card) => {
-    const cardElement = Card(card);
-    cardList.append(cardElement);
-  });
+//   cards.forEach((card) => {
+//     const cardElement = Card(card);
+//     cardList.append(cardElement);
+//   });
 
-  return cardList;
-}
+//   return cardList;
+// }
 
-function App() {
-  const app = document.createElement("main");
-  app.classList.add("app");
-  app.append(Header(), Form(), CardList());
+// function App() {
+//   const app = document.createElement("main");
+//   app.classList.add("app");
+//   app.append(Header(), Form(), CardList());
 
-  return app;
-}
+//   return app;
+// }
+
+App();
+Header();
+Form();
+CardList();
+// Card();
+// Bookmark();
 
 // The render function renders the app to the DOM
 function render() {
