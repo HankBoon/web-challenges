@@ -1,5 +1,5 @@
-import Bookmark from "../Bookmark/Bookmark.js";
-export default function Card(props) {
+// import Bookmark from "../Bookmark/Bookmark.js";
+export default function Card(props, Bookmark) {
   const card = document.createElement("article");
   card.classList.add("card");
   card.innerHTML = /* html */ `

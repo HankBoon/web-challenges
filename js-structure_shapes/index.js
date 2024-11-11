@@ -47,7 +47,11 @@ const root = document.getElementById("root");
 // const squareElement = CreateShape("square")";
 // const pentagonElement = CreateShape("pentagon");
 
-const circleElement = CreateCircle(getRandomColor);
-const pentagonElement = CreatePentagon(getRandomColor);
-const squareElement = CreateSquare(getRandomColor);
-root.append(circleElement, pentagonElement, squareElement);
+// const circleElement = CreateCircle(getRandomColor);
+// const pentagonElement = CreatePentagon(getRandomColor);
+// const squareElement = CreateSquare(getRandomColor);
+root.append(
+  CreateCircle(getRandomColor),
+  CreatePentagon(getRandomColor),
+  CreateSquare(getRandomColor)
+);

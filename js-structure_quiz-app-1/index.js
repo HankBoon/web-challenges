@@ -6,6 +6,13 @@ import App from "./components/App/App.js";
 import CardList from "./components/CardList/CardList.js";
 import Bookmark from "./components/Bookmark/Bookmark.js";
 
+function render(Header, Form, CardList, cards, Card, Bookmark) {
+  const root = document.querySelector("#root");
+  root.append(App(Header, Form, CardList, cards, Card, Bookmark));
+}
+
+render(Header, Form, CardList, cards, Card, Bookmark);
+
 // function Header() {
 //   const header = document.createElement("header");
 //   header.classList.add("header");
@@ -189,17 +196,11 @@ import Bookmark from "./components/Bookmark/Bookmark.js";
 //   return app;
 // }
 
-App();
-Header();
-Form();
-CardList();
-// Card();
+// App();
+// Header();
+// Form();
+// CardList(cards, Card);
+// Card(Bookmark, cards);
 // Bookmark();
 
 // The render function renders the app to the DOM
-function render() {
-  const root = document.querySelector("#root");
-  root.append(App());
-}
-
-render();
