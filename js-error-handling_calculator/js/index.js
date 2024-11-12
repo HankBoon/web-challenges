@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
   try {
     output.innerText = operations[operation](firstNumber, secondNumber);
   } catch (error) {
-    console.log("error");
+    // console.log("error");
     output.innerText = error;
   }
 });
