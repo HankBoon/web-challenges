@@ -41,10 +41,8 @@ Assign each name to a variable called "student1" through "student5", in the give
 
 const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
 // export const [student1, ...restOfStudents] = nestedStudents;
-export const [student1, nestedStudents1, nestedStudents2] = nestedStudents;
-export const [student2, student3] = nestedStudents1;
-console.log(nestedStudents1);
-export const [student4, student5] = nestedStudents2;
+export const [student1, [student2, student3], [student4, student5]] =
+  nestedStudents;
 // console.log(spreadStudents);
 /*
 EXERCISE 6
