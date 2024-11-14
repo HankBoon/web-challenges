@@ -20,9 +20,8 @@ export const getRelocatedCity = (city1, city2) => {
   if (!city2) {
     city2 = { name: "Berlin", country: "Germany" };
   }
-  // get letztes item in getNameAndCountry(city2)
-  const country = getNameAndCountry(city2)[getNameAndCountry(city2).length - 1];
-  // const country = city2.country;
+  const country = getNameAndCountry(city2)[getNameAndCountry(city2).length - 1]; // get letztes item in getNameAndCountry(city2)  // const country = city2.country;
+
   // erstellt ein leeres Object, nimmt alle keys von city1 und steckt sie in tempObject. country wird tempObject hinzugefügt.
   const tempObject = {};
   Object.assign(tempObject, city1);
