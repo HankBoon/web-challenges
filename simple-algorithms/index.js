@@ -64,10 +64,10 @@ function averageWordLength(words) {
   });
   sumOfWords = sumOfWords / words.length;
   console.log("result", Math.floor(sumOfWords));
-  return Math.floor(sumOfWords);
+  return sumOfWords;
 }
 averageWordLength(words2);
-console.log(averageWordLength(words2));
+// console.log(averageWordLength(words2));
 
 // Unique arrays - return an array without duplicates
 
