@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem;
+  font-family: system-ui;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: pink;
+}
