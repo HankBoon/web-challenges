@@ -48,7 +48,7 @@ export default function EntriesSection() {
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map((entry) => {
+        {entries.map((entry, index) => {
           return (
             <Fragment key={entry.id}>
               <Entry
@@ -57,9 +57,7 @@ export default function EntriesSection() {
                 motto={entry.motto}
                 notes={entry.notes}
               />
-              {entries.indexOf(entry) !== entries.length - 1 ? (
-                <Divider />
-              ) : null}
+              {index < entries.length - 1 ? <Divider /> : null}
             </Fragment>
           );
         })}
