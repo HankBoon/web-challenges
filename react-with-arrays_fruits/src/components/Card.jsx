@@ -1,8 +1,8 @@
 import "./Card.css";
 
-export default function Card({ key, name }) {
+export default function Card({ name, color }) {
   return (
-    <p key={key} className="card">
+    <p style={{ backgroundColor: color }} className="card">
       {name}
     </p>
   );
