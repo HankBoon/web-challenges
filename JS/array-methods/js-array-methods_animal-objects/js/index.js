@@ -97,17 +97,43 @@ console.log(indexOfAnimalWithNameLongerFive);
 // Hint: sort() mutates the original array, which is bad.
 // Make sure to use toSorted() instead.
 
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animals.toSorted((a, b) => {
+  const nameA = a.name;
+  const nameB = b.name;
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+});
 
-const animalsSortedByWeightStartingWithLowest = null;
+const animalsSortedByWeightStartingWithLowest = animals.toSorted((a, b) => {
+  const animalA = a.weight;
+  const animalB = b.weight;
+  if (animalA < animalB) {
+    return -1;
+  }
+  if (animalA > animalB) {
+    return 1;
+  }
+  return 0;
+});
 
 // Note:
 // - reverse() mutates the original array (like sort() does), which is bad.
 // Use toReversed() instead (or any other method to get the expected result)
 
-const animalsSortedByWeightReversed = null;
+const animalsSortedByWeightReversed = animals
+  .toSorted((a, b) => a.weight - b.weight)
+  .toReversed();
 
-const animalWithWeightMoreThanFivehundredExists = null;
+const animalWithWeightMoreThanFivehundredExists = animals.forEach((animal) => {
+  if (animal > 500) {
+    return true;
+  }
+});
 
 // Hint: Filter for Europe first, then check every animal for its weight.
 const allAnimalsInEuropeWeighLessThanOnehundred = null;
