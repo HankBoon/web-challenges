@@ -11,6 +11,9 @@ export default function App() {
     const data = Object.fromEntries(formData);
     setHoliday(data.holiday);
     SetDate(data.date);
+    console.log(data);
+    event.target.elements.holiday.focus();
+    event.target.reset();
   }
 
   return (
