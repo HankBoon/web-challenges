@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 
 export default function PokemonList() {
   const [pokemonData, setPokemonData] = useState([]);
-  const [page, setPage] = useState(
-    `https://pokeapi.co/api/v2/pokemon?offset=0`
-  );
-  const [nextPage, setNextPage] = useState("");
-  const [prevPage, setPrevPage] = useState("");
+  const [page, setPage] = useState(0);
+  const [nextPage, setNextPage] = useState(null);
+  const [prevPage, setPrevPage] = useState(null);
 
   // console.log("pokemon", pokemonData);
   // console.log("nextPage", nextPage);
@@ -18,7 +16,9 @@ export default function PokemonList() {
   useEffect(() => {
     async function loadPokemon() {
       try {
-        const response = await fetch(page);
+        const response = await fetch(
+          `https://pokeapi.co/api/v2/pokemon?offset=${page}`
+        );
         const data = await response.json();
         // console.log("response", response);
         console.log("data:", data);
@@ -34,12 +34,16 @@ export default function PokemonList() {
 
   return (
     <main>
-      <button onClick={() => setPage(prevPage)} type="button">
-        Previous Page
-      </button>
-      <button onClick={() => setPage(nextPage)} type="button">
-        Next Page
-      </button>
+      {prevPage && (
+        <button onClick={() => setPage(page - 20)} type="button">
+          Previous Page
+        </button>
+      )}
+      {nextPage && (
+        <button onClick={() => nextPage && setPage(page + 20)} type="button">
+          Next Page
+        </button>
+      )}
       <ul>
         {pokemonData.map(({ name }) => (
           <li key={name}>{name}</li>
