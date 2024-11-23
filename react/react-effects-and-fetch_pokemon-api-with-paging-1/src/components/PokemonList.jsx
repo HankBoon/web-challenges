@@ -6,13 +6,6 @@ export default function PokemonList() {
   const [nextPage, setNextPage] = useState(null);
   const [prevPage, setPrevPage] = useState(null);
 
-  // console.log("pokemon", pokemonData);
-  // console.log("nextPage", nextPage);
-
-  // function handleSetNextPage(nextPage) {
-  //   setNextPage(nextPage);
-  // }
-
   useEffect(() => {
     async function loadPokemon() {
       try {
@@ -20,8 +13,7 @@ export default function PokemonList() {
           `https://pokeapi.co/api/v2/pokemon?offset=${page}`
         );
         const data = await response.json();
-        // console.log("response", response);
-        console.log("data:", data);
+
         setPokemonData(data.results);
         setNextPage(data.next);
         setPrevPage(data.previous);
