@@ -26,6 +26,7 @@ export default function Volumes() {
         <button
           onClick={() => {
             const randomVolume = getRandomElement(volumes);
+            console.log(randomVolume);
             router.push(`/volumes/${randomVolume.slug}`);
           }}
         >
