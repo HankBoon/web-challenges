@@ -9,15 +9,15 @@ export default function Volumes() {
       <h2>All Volumes</h2>
       <ul>
         <li>
-          <Link href="./the-fellowship-of-the-ring.jsx">
+          <Link href="./volumes/the-fellowship-of-the-ring">
             The Fellowship of the Ring
           </Link>
         </li>
         <li>
-          <Link href="./the-two-towers.jsx">The two Towers</Link>
+          <Link href="./volumes/the-two-towers">The two Towers</Link>
         </li>
         <li>
-          <Link href="./the-return-of-the-king.jsx">
+          <Link href="./volumes/the-return-of-the-king">
             The Return of the King
           </Link>
         </li>
