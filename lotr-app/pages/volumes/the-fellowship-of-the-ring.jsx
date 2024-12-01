@@ -1,12 +1,11 @@
 import { volumes } from "@/lib/data";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
 
 export default function VolumeOne() {
   const volume = volumes.find(
     ({ slug }) => slug === "the-fellowship-of-the-ring"
   );
-  const [navButtons, setNavButtons] = useState("first");
 
   console.log(volumes.indexOf(volume));
 
@@ -17,42 +16,24 @@ export default function VolumeOne() {
   const nextVolume = volumes[nextVolumeIndex];
 
   function PrevNextButton() {
-    if (navButtons === "last") {
+    if (volumes.indexOf(volume) === volumes.length - 1) {
       return (
         <Link href={`/volumes/${previousVolume.slug}`}>Previous Page</Link>
       );
-    }
-    if (navButtons === "first") {
-      return <Link href={`/volumes/${nextVolume.slug}`}>Next Page</Link>;
-    }
-    if (navButtons === "middle") {
+    } else if (
+      volumes.indexOf(volume) !== volumes.length - 1 &&
+      volumes.indexOf(volume) !== 0
+    ) {
       return (
         <>
-          {" "}
+          <Link href={`/volumes/${nextVolume.slug}`}>Next Page</Link>
           <Link href={`/volumes/${previousVolume.slug}`}>Previous Page</Link>
-          <Link href={`/volumes/${nextVolume.slug}`}>Next Page</Link>;
         </>
       );
+    } else if (volumes.indexOf(volume) === 0) {
+      return <Link href={`/volumes/${nextVolume.slug}`}>Next Page</Link>;
     }
   }
-
-  //   const previousVolume = volumes.find(
-  //     (volume, index) => index === volumes.indexOf(volume) - 1
-  //   );
-  //   const nextVolume = volumes.find((index) => index === volumes[index + 1]);
-  //   console.log("prev Volume : ", previousVolume);
-
-  //   function PrevNextButton() {
-  //     if (volumes.indexOf(volume) !== 0) {
-
-  //       return (
-  //         <Link href={`/volumes/${previousVolume.slug}`}>Previous Page</Link>
-  //       );
-  //     }
-  //     if (volumes.indexOf(volume) !== volumes.length - 1) {
-  //       return <Link href={`/volumes/${nextVolume.slug}`}>Next Page</Link>;
-  //     }
-  //   }
 
   return (
     <>
@@ -68,6 +49,12 @@ export default function VolumeOne() {
           );
         })}
       </ul>
+      <Image
+        src={volume.cover}
+        height={230}
+        width={140}
+        alt="a picture"
+      ></Image>
       <PrevNextButton></PrevNextButton>
     </>
   );
