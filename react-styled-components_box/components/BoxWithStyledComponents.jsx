@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-export default function BoxWithStyledComponents({ isBlack }) {
-  return <StyledDiv $isBlack={isBlack}></StyledDiv>;
+export default function BoxWithStyledComponents({ $isBlack }) {
+  return <StyledDiv $isBlack={$isBlack}></StyledDiv>;
 }
 
 const StyledDiv = styled.div`
@@ -14,10 +14,10 @@ const StyledDiv = styled.div`
     background-color: red;
   }
 
-  /* background-color: ${({ $isBlack }) => ($isBlack ? "black" : "green")}; */
-  ${({ $isBlack }) =>
+  background-color: ${({ $isBlack }) => ($isBlack ? "black" : "green")};
+  /* ${({ $isBlack }) =>
     $isBlack &&
     css`
       background-color: black;
-    `}
+    `} */
 `;
