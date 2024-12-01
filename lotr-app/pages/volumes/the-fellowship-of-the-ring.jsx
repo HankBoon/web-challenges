@@ -20,6 +20,7 @@ export default function VolumeOne() {
           );
         })}
       </ul>
+      <Link href="/volumes/the-two-towers">Next Page</Link>
     </>
   );
 }
