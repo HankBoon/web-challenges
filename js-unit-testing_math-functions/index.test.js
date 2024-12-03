@@ -9,7 +9,7 @@ test("returns the the sum of the paramaters a and b by running add(a,b)", () => 
   const result2 = add(-10, 3);
   expect(result2).toBeLessThan(0);
   const result3 = add(0.1, 0.2);
-  expect(result3).toBeCloseTo.toString(0.3);
+  expect(result3).toBeCloseTo(0.5);
 });
 
 test("returns the the difference of the paramaters a and b by running subtract(a,b)", () => {
