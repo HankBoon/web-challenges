@@ -4,11 +4,10 @@ import Chance from "chance";
 // var Chance = require("chance");
 const chance = new Chance();
 
-const name = chance.first();
-const age = chance.age();
-const profession = chance.profession();
-
 export const server = createServer((request, response) => {
+  const name = chance.first();
+  const age = chance.age();
+  const profession = chance.profession();
   response.statusCode = 200;
   response.end(
     `Hello my name is ${name} and I am ${age} years old. I am a ${profession}`
