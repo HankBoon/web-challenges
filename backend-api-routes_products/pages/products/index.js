@@ -11,7 +11,13 @@ export default function Products() {
   return (
     <ul>
       {data.map((product) => {
-        return <li key={data.id}>{product}</li>;
+        return (
+          <li key={product.id}>
+            <h1>{product.name}</h1>
+            <p>{product.description}</p>
+            <p>{product.price}</p>
+          </li>
+        );
       })}
     </ul>
   );
